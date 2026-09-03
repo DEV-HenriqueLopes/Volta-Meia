@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Volta & Meia | Cadastro</title>
+    <link rel="shortcut icon" href="../../Imagens/ImageNavbar/logo_volta&meia.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../HomePage/style.css">
+    <meta name="view-transition" content="same-origin">
+</head>
+<body class="bg-body-tertiary position-relative" style="position: relative; width: 100%; height: 100vh;">
+    <header>
+        <nav class="navbar navbar-expand h-75px nav-login" style="margin: 0; ">
+            <div class="container-fluid">
+                <a class="navbar-brand position-absolute" href="../../HomePage/index.html">
+                    <img src="../../Imagens/ImageNavbar/logo_extenso_volta&meia.png" alt="Logo" class="d-inline-block align-text-top">
+                </a>
+            </div>
+        </nav>
+    </header>
+    <section class="row form-login">
+        <div class="col-12 col-md-6 form-title ">
+            <h2>Digite seu email e senha para se cadastrar!</h2>
+            <a href="login.html" class="p-2 rounded">Já tem uma conta? Faça login</a>
+        </div>
+        <form action="login_process.html" method="post" class="bg-white col-12 col-md-6 rounded p-5 form-info">
+            <div class="mt-5" >
+                <label for="iemail">Email:</label> <br>
+                <input type="email" id="iemail" name="email" required autocomplete="username" maxlength="254" class="w-100 rounded bg-body-subtle p-3">
+            </div>
+            <div class="mt-3">
+                <label for="isenha">Senha:</label> <br>
+                <input type="password" id="isenha" name="senha" minlength="8" maxlength="128" required autocomplete="current-password" class="w-100 rounded bg-body-subtle p-3 ">
+            </div>
+            <div class="mt-3">
+                <label for="inome">Nome:</label> <br>
+                <input type="text" id="inome" name="nome" required maxlength="255" class="w-100 rounded bg-body-subtle p-3">
+            </div>
+            <div class="mt-3">
+                <label for="itel">Telefone:</label> <br>
+                <input type="tel" id="itel" name="tel" required maxlength="16" pattern="\(\d{2}\)\s\d{4,5}-\d{4}" class="w-100 rounded bg-body-subtle p-3">
+            </div>
+            <div class="mt-5 d-flex">
+                <label for="icpf" style="font-size: 0.85rem;"> <input type="checkbox" id="itermo" name="termo" required class="bg-body-subtle me-1"> Ao clicar, aceito os <a href="#" class="text-primary">Termos de condiccoes</a> e autorizo o uso de meus dados de acordo com a politica de privacidade</label> <br> 
+            </div>
+            <div class="mt-2 form-buttons">
+                <button type="submit" class="rounded btn-entrar p-3 my-3 mx-auto">Cadastar-se</button>
+            </div>
+            
+        </form>
+    </section>
+    <footer class="position-fixed bottom-0 bg-dark text-white text-center w-100 p-3 footer-login mt-auto">
+        <p>&copy; 2024-2026 Volta & Meia. Todos os direitos reservados.</p>
+
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="../../HomePage/script.js"></script>
+</body>
+</html>
