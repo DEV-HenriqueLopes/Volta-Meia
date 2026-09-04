@@ -138,14 +138,11 @@ a:hover {
 }
 
 .container-principal>.container-interno-principal {
-    width: fit-content;
     width: calc((var(--largura-card) * 5) + (var(--largura-espaco-card) * 5));
     margin: auto;
-    flex-direction: row;
-    flex-wrap: nowrap;
 }
 
-.container-destaque>.cabecalho-destaque {
+.cabecalho-destaque {
     display: flex;
     height: 7vh;
     min-height: 52px;
@@ -156,7 +153,7 @@ a:hover {
     align-items: center;
 }
 
-.container-destaque>.cabecalho-destaque>h2 {
+.cabecalho-destaque>h2 {
     color: white;
     font-family: var(--font-destaque);
     font-weight: 700;
@@ -173,6 +170,10 @@ a:hover {
     margin-left: auto;
     margin-right: 30px;
     margin-block: auto;
+}
+
+.container-principal>.cabecalho-destaque>a {
+    background-color: white;
 }
 
 /* Scrollbar Customizada */
@@ -232,6 +233,7 @@ a:hover {
 }
 
 .oferta-item {
+    width: fit-content;
     flex-shrink: 0;
     scroll-snap-align: start;
 }
