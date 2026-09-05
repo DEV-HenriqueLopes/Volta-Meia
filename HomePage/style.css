@@ -127,7 +127,7 @@ a:hover {
 .container-principal,
 .filtro,
 .item-beneficios {
-    border-radius: 0 0 10px 10px;
+    border-radius: 0 0 4px 4px;
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
 }
 
@@ -135,11 +135,13 @@ a:hover {
 .container-principal {
     width: fit-content;
     margin: auto;
+    flex-wrap: wrap;
 }
 
 .container-principal>.container-interno-principal {
     width: calc((var(--largura-card) * 5) + (var(--largura-espaco-card) * 5));
     margin: auto;
+    flex-wrap: wrap;
 }
 
 .cabecalho-destaque {
@@ -147,7 +149,7 @@ a:hover {
     height: 7vh;
     min-height: 52px;
     background-color: rgb(56, 196, 56);
-    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 -2px 5px -2px rgba(0, 0, 0, 0.1);
     margin-inline: -25px;
     border-radius: 10px 10px 0 0;
     align-items: center;
@@ -159,27 +161,24 @@ a:hover {
     font-weight: 700;
 }
 
-.container-destaque>.cabecalho-destaque>p {
+.container-destaque>.cabecalho-destaque>p,
+.container-principal>.cabecalho-destaque>a{
     color: rgb(56, 196, 56);
     background-color: white;
     border-radius: 5px;
-    font-family: var(--font-destaque);
-    font-weight: 900;
-    font-size: 0.8rem;
+    font: 900 0.8rem var(--font-destaque);
     padding: 5px;
     margin-left: auto;
     margin-right: 30px;
     margin-block: auto;
+    list-style-type: none;
 }
 
-.container-principal>.cabecalho-destaque>a {
-    background-color: white;
-}
 
 /* Scrollbar Customizada */
 
 .container-roll::-webkit-scrollbar {
-    height: 6px;                
+    display: none;             
 }
 
 .container-roll::-webkit-scrollbar-track {
@@ -244,6 +243,7 @@ a:hover {
 
 .card {
     width: 180px;
+    border-radius: 0px;
 }
 
 .card-body {
@@ -379,16 +379,24 @@ select {
         max-width: calc((var(--largura-card) * 4) + (var(--largura-espaco-card) * 4));
     }
 
+    .container-principal>.container-interno-principal {
+        width: calc((var(--largura-card) * 4) + (var(--largura-espaco-card) * 4));
+    }
+
     .form-login { width: 60vw; }
 }
 
 @media screen and (max-width:992px) {
 
-    .form-login { width: 70vw !important; }
-
     .container-roll {
         max-width: calc((var(--largura-card) * 3) + (var(--largura-espaco-card) * 3));
     }
+
+    .container-principal>.container-interno-principal {
+        width: calc((var(--largura-card) * 3) + (var(--largura-espaco-card) * 3));
+    }
+
+    .form-login { width: 70vw !important; }
 }
 
 @media screen and (max-width:768px) {
@@ -449,6 +457,10 @@ select {
 
     .container-roll {
         max-width: calc((var(--largura-card) * 2) + 11px);
+    }
+
+    .container-principal>.container-interno-principal {
+        width: calc((var(--largura-card) * 2) + (var(--largura-espaco-card) * 2));
     }
 
     .btn-roll {

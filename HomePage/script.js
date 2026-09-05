@@ -37,7 +37,7 @@ const btnNext = document.getElementById('btn-next');
 function scrollL() {
 
     const card = container.querySelector('.oferta-item');
-    const tamanhoDoPulo = card.clientWidth + 32;
+    const tamanhoDoPulo = card.clientWidth + 24;
 
     container.scrollBy({
         left: -tamanhoDoPulo,
@@ -47,7 +47,7 @@ function scrollL() {
 
 function scrollR() {
     const card = container.querySelector('.oferta-item');
-    const tamanhoDoPulo = card.clientWidth + 32; 
+    const tamanhoDoPulo = card.clientWidth + 24; 
 
     container.scrollBy({
         left: tamanhoDoPulo,
