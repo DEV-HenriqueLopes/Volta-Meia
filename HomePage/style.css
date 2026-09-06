@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
+
 @view-transition {
   navigation: auto;
 }
@@ -139,9 +140,12 @@ a:hover {
 }
 
 .container-principal>.container-interno-principal {
-    width: calc((var(--largura-card) * 5) + (var(--largura-espaco-card) * 5));
+    width: calc((var(--largura-card) * 5) + (var(--largura-espaco-card) * 4));
     margin: auto;
+    display: flex;
     flex-wrap: wrap;
+    gap: 24px;
+    justify-content: space-between;
 }
 
 .cabecalho-destaque {
@@ -197,17 +201,19 @@ a:hover {
 
 .container-roll {
     width: fit-content;
-    max-width: calc((var(--largura-card) * 5) + (var(--largura-espaco-card) * 5));
+    width: calc((var(--largura-card) * 5) + (var(--largura-espaco-card) * 4));
     margin: auto;
     overflow-x: auto;
     flex-direction: row;
     flex-wrap: nowrap;
     scroll-behavior: smooth;
     scroll-snap-type: mandatory;
+    gap: 24px;
 }
 
 .btn-roll {
     top: 50%;
+    z-index: 100;
     height: 70px;
     width: 70px;
     background-color: #f8f9fa;
@@ -235,10 +241,6 @@ a:hover {
     width: fit-content;
     flex-shrink: 0;
     scroll-snap-align: start;
-}
-
-.container-roll > .oferta-item:not(:first-child) {
-    margin-left: 24px;
 }
 
 .card {
@@ -376,11 +378,11 @@ select {
 @media screen and (max-width:1200px) {
 
     .container-roll {
-        max-width: calc((var(--largura-card) * 4) + (var(--largura-espaco-card) * 4));
+        width: calc((var(--largura-card) * 4) + (var(--largura-espaco-card) * 3));
     }
 
     .container-principal>.container-interno-principal {
-        width: calc((var(--largura-card) * 4) + (var(--largura-espaco-card) * 4));
+        width: calc((var(--largura-card) * 4) + (var(--largura-espaco-card) * 3));
     }
 
     .form-login { width: 60vw; }
@@ -389,11 +391,11 @@ select {
 @media screen and (max-width:992px) {
 
     .container-roll {
-        max-width: calc((var(--largura-card) * 3) + (var(--largura-espaco-card) * 3));
+        width: calc((var(--largura-card) * 3) + (var(--largura-espaco-card) * 2));
     }
 
     .container-principal>.container-interno-principal {
-        width: calc((var(--largura-card) * 3) + (var(--largura-espaco-card) * 3));
+        width: calc((var(--largura-card) * 3) + (var(--largura-espaco-card) * 2));
     }
 
     .form-login { width: 70vw !important; }
@@ -456,11 +458,11 @@ select {
     }
 
     .container-roll {
-        max-width: calc((var(--largura-card) * 2) + 11px);
+        width: calc((var(--largura-card) * 2) + (var(--largura-espaco-card) * 1));
     }
 
     .container-principal>.container-interno-principal {
-        width: calc((var(--largura-card) * 2) + (var(--largura-espaco-card) * 2));
+        width: calc((var(--largura-card) * 2) + (var(--largura-espaco-card) * 1));
     }
 
     .btn-roll {
@@ -515,9 +517,10 @@ select {
         padding: 0px !important;
     }
 
-
-    .container-roll > .oferta-item:not(:first-child) {
-        margin-left: 6px;
+    .container-roll,
+    .container-interno-principal {
+        gap: 6px !important;
+        justify-content: initial !important;
     }
 
     .card-body {
