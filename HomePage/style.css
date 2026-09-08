@@ -162,7 +162,9 @@ a:hover {
 .cabecalho-destaque>h2 {
     color: white;
     font-family: var(--font-destaque);
+    font-size: 1.5rem;
     font-weight: 700;
+    margin: 0;
 }
 
 .container-destaque>.cabecalho-destaque>p,
