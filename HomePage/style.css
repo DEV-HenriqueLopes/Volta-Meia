@@ -29,7 +29,9 @@ a:hover {
 
 :root {
     --bg-cor-01: #efb810;
-    --bg-cor-02: #ffedb7;   
+    --bg-cor-02: #ffedb7;
+    --bg-cor-destaque-01: #38c438;
+    --bg-cor-destaque-02: #f07a1b;   
     --largura-card: 180px;
     --largura-espaco-card: 24px;
     --font-destaque: "Anton", sans-serif;
@@ -152,7 +154,6 @@ a:hover {
     display: flex;
     height: 7vh;
     min-height: 52px;
-    background-color: rgb(56, 196, 56);
     box-shadow: 0 -2px 5px -2px rgba(0, 0, 0, 0.1);
     margin-inline: -25px;
     border-radius: 10px 10px 0 0;
