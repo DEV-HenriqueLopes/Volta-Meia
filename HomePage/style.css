@@ -130,7 +130,7 @@ a:hover {
 .container-principal,
 .filtro,
 .item-beneficios {
-    border-radius: 0 0 4px 4px;
+    border-radius: 0 0 2px 2px;
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
 }
 
@@ -152,8 +152,7 @@ a:hover {
 
 .cabecalho-destaque {
     display: flex;
-    height: 7vh;
-    min-height: 52px;
+    height: 70px;
     box-shadow: 0 -2px 5px -2px rgba(0, 0, 0, 0.1);
     margin-inline: -25px;
     border-radius: 10px 10px 0 0;
@@ -169,16 +168,33 @@ a:hover {
 }
 
 .container-destaque>.cabecalho-destaque>p,
-.container-principal>.cabecalho-destaque>a{
-    color: rgb(56, 196, 56);
+.container-principal>.cabecalho-destaque>.nav-link{
     background-color: white;
     border-radius: 5px;
-    font: 900 0.8rem var(--font-destaque);
-    padding: 5px;
+    font: 300 0.8rem arial;
+    padding: 10px;
     margin-left: auto;
     margin-right: 30px;
     margin-block: auto;
     list-style-type: none;
+    word-spacing: 1.5px;
+}
+
+.container-beneficios, .container-propaganda {
+     width: calc((var(--largura-card) * 5) + (var(--largura-espaco-card) * 4) + 1.5em);
+     margin: auto;
+}
+
+.banner-1 {
+    width: 49%;
+    height: 120px;
+    border-radius: 0 0 2px 2px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+    background-image: linear-gradient(to right, black 50%, transparent);
+}
+
+.banner-1>h5 {
+    color: white;
 }
 
 
@@ -217,13 +233,13 @@ a:hover {
 .btn-roll {
     top: 50%;
     z-index: 100;
-    height: 70px;
-    width: 70px;
+    height: 50px;
+    width: 50px;
     background-color: #f8f9fa;
     border: none;
     box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.171);
     border-radius: 50%;
-    font-size: 50px;
+    font-size: 30px;
     cursor: pointer;
     transform: translate(0%, -50%);
 }
@@ -232,8 +248,8 @@ a:hover {
         box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.171);
 }
 
-#btn-prev { left: -35px; }
-#btn-next { right: -35px; }
+#btn-prev-1, #btn-prev-2 { left: -30px; }
+#btn-next-1, #btn-next-2 { right: -30px; }
 
 .btn-hidden {
     opacity: 0;
@@ -280,11 +296,6 @@ a:hover {
 
 .item {
     height: 35vh;
-}
-
-.item-beneficios {
-    height: 30vw;
-    max-height: 25vh;
 }
 
 iframe {
@@ -388,6 +399,10 @@ select {
         width: calc((var(--largura-card) * 4) + (var(--largura-espaco-card) * 3));
     }
 
+    .container-beneficios, .container-propaganda {
+        width: calc((var(--largura-card) * 4) + (var(--largura-espaco-card) * 3) + 1.5em);
+    }
+
     .form-login { width: 60vw; }
 }
 
@@ -399,6 +414,10 @@ select {
 
     .container-principal>.container-interno-principal {
         width: calc((var(--largura-card) * 3) + (var(--largura-espaco-card) * 2));
+    }
+
+    .container-beneficios, .container-propaganda {
+        width: calc((var(--largura-card) * 3) + (var(--largura-espaco-card) * 2) + 1.5em);
     }
 
     .form-login { width: 70vw !important; }
@@ -466,6 +485,10 @@ select {
 
     .container-principal>.container-interno-principal {
         width: calc((var(--largura-card) * 2) + (var(--largura-espaco-card) * 1));
+    }
+
+    .container-beneficios, .container-propaganda {
+        width: calc((var(--largura-card) * 2) + (var(--largura-espaco-card) * 1) + 1.5em);
     }
 
     .btn-roll {

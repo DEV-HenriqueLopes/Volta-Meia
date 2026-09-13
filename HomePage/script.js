@@ -30,48 +30,48 @@ document.addEventListener("DOMContentLoaded", function() {
 })
 
 
-const container = document.getElementById('container-scroll');
-const btnPrev = document.getElementById('btn-prev');
-const btnNext = document.getElementById('btn-next');
+function setupCarousel(containerId, btnPrevId, btnNextId, itemSelector = '.oferta-item') {
+    const container = document.getElementById(containerId);
+    const btnPrev = document.getElementById(btnPrevId);
+    const btnNext = document.getElementById(btnNextId);
 
-function scrollL() {
+    if (!container || !btnPrev || !btnNext) return;
 
-    const card = container.querySelector('.oferta-item');
-    const tamanhoDoPulo = card.clientWidth + 24;
+    const getTamanhoDoPulo = () => {
+        const card = container.querySelector(itemSelector);
+        if (!card) return 300;
+        const gap = parseInt(window.getComputedStyle(container).gap) || 24;
+        return card.clientWidth + gap;
+    };
 
-    container.scrollBy({
-        left: -tamanhoDoPulo,
-        behavior: 'smooth'
+    btnPrev.addEventListener('click', () => {
+        container.scrollBy({
+            left: -getTamanhoDoPulo(),
+            behavior: 'smooth'
+        });
     });
-}
 
-function scrollR() {
-    const card = container.querySelector('.oferta-item');
-    const tamanhoDoPulo = card.clientWidth + 24; 
-
-    container.scrollBy({
-        left: tamanhoDoPulo,
-        behavior: 'smooth'
+    btnNext.addEventListener('click', () => {
+        container.scrollBy({
+            left: getTamanhoDoPulo(),
+            behavior: 'smooth'
+        });
     });
+
+    const atualizarBotoes = () => {
+        btnPrev.classList.toggle('btn-hidden', container.scrollLeft <= 0);
+
+        const limiteScroll = container.scrollWidth - container.clientWidth;
+        btnNext.classList.toggle('btn-hidden', container.scrollLeft >= limiteScroll - 1);
+    };
+
+    container.addEventListener('scroll', atualizarBotoes);
+    window.addEventListener('resize', atualizarBotoes);
+    
+    // Executa no carregamento
+    atualizarBotoes();
 }
 
-function atualizarBotoes() {
-    if (container.scrollLeft <= 0) {
-        btnPrev.classList.add('btn-hidden');
-    } else {
-        btnPrev.classList.remove('btn-hidden');
-    }
+setupCarousel('container-scroll-1', 'btn-prev-1', 'btn-next-1');
 
-    const limiteScroll = container.scrollWidth - container.clientWidth;
-
-    if (container.scrollLeft >= limiteScroll - 1) {
-        btnNext.classList.add('btn-hidden');
-    } else {
-        btnNext.classList.remove('btn-hidden');
-    }
-}
-
-container.addEventListener('scroll', atualizarBotoes);
-window.addEventListener('resize', atualizarBotoes);
-
-atualizarBotoes();
+setupCarousel('container-scroll-2', 'btn-prev-2', 'btn-next-2');
