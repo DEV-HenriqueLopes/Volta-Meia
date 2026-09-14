@@ -141,7 +141,8 @@ a:hover {
     flex-wrap: wrap;
 }
 
-.container-principal>.container-interno-principal {
+.container-principal>.container-interno-principal,
+.container-expandido-principal {
     width: calc((var(--largura-card) * 5) + (var(--largura-espaco-card) * 4));
     margin: auto;
     display: flex;
