@@ -75,9 +75,11 @@ setupCarousel('container-scroll-1', 'btn-prev-1', 'btn-next-1');
 
 setupCarousel('container-scroll-2', 'btn-prev-2', 'btn-next-2');
 
+
 const btnMostrarMais = document.getElementById('btnMostrarMais');
 const blocosExtras = document.querySelectorAll('.bloco-extra');
 let passoAtual = 0;
+const urlDestino = '#';
 
 btnMostrarMais.addEventListener('click', () => {
     if (passoAtual < blocosExtras.length) {
@@ -86,5 +88,13 @@ btnMostrarMais.addEventListener('click', () => {
         });
 
         passoAtual++;
+
+        if (passoAtual === blocosExtras.length) {
+            btnMostrarMais.innerText = 'Mostrar tudo';
+        }
+    } 
+    else {
+        window.location.href = urlDestino;
     }
 });
+

@@ -32,7 +32,7 @@ a:hover {
     --bg-cor-02: #ffedb7;
     --bg-cor-destaque-01: #38c438;
     --bg-cor-destaque-02: #f07a1b;   
-    --largura-card: 180px;
+    --largura-card: 200px;
     --largura-espaco-card: 24px;
     --font-destaque: "Anton", sans-serif;
 }
@@ -128,8 +128,7 @@ a:hover {
 /* Containers e Cards */
 .container-destaque,
 .container-principal,
-.filtro,
-.item-beneficios {
+.filtro{
     border-radius: 0 0 2px 2px;
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
 }
@@ -143,12 +142,11 @@ a:hover {
 
 .container-principal>.container-interno-principal,
 .container-expandido-principal {
-    width: calc((var(--largura-card) * 5) + (var(--largura-espaco-card) * 4));
+    width: calc((var(--largura-card) * 4) + (var(--largura-espaco-card) * 3));
     margin: auto;
     display: flex;
     flex-wrap: wrap;
     gap: 24px;
-    justify-content: space-between;
 }
 
 .cabecalho-destaque {
@@ -181,8 +179,8 @@ a:hover {
     word-spacing: 1.5px;
 }
 
-.container-beneficios, .container-propaganda {
-     width: calc((var(--largura-card) * 5) + (var(--largura-espaco-card) * 4) + 1.5em);
+.container-avaliacoes, .container-propaganda, .container-categorias {
+     width: calc((var(--largura-card) * 4) + (var(--largura-espaco-card) * 3) + 1.5em);
      margin: auto;
 }
 
@@ -221,7 +219,7 @@ a:hover {
 
 .container-roll {
     width: fit-content;
-    width: calc((var(--largura-card) * 5) + (var(--largura-espaco-card) * 4));
+    width: calc((var(--largura-card) * 4) + (var(--largura-espaco-card) * 3));
     margin: auto;
     overflow-x: auto;
     flex-direction: row;
@@ -264,7 +262,7 @@ a:hover {
 }
 
 .card {
-    width: 180px;
+    width: 200px;
     border-radius: 0px;
 }
 
@@ -392,18 +390,6 @@ select {
 
 @media screen and (max-width:1200px) {
 
-    .container-roll {
-        width: calc((var(--largura-card) * 4) + (var(--largura-espaco-card) * 3));
-    }
-
-    .container-principal>.container-interno-principal {
-        width: calc((var(--largura-card) * 4) + (var(--largura-espaco-card) * 3));
-    }
-
-    .container-beneficios, .container-propaganda {
-        width: calc((var(--largura-card) * 4) + (var(--largura-espaco-card) * 3) + 1.5em);
-    }
-
     .form-login { width: 60vw; }
 }
 
@@ -417,8 +403,9 @@ select {
         width: calc((var(--largura-card) * 3) + (var(--largura-espaco-card) * 2));
     }
 
-    .container-beneficios, .container-propaganda {
+    .container-avaliacoes, .container-propaganda, .container-categorias {
         width: calc((var(--largura-card) * 3) + (var(--largura-espaco-card) * 2) + 1.5em);
+        margin: auto;
     }
 
     .form-login { width: 70vw !important; }
@@ -488,8 +475,9 @@ select {
         width: calc((var(--largura-card) * 2) + (var(--largura-espaco-card) * 1));
     }
 
-    .container-beneficios, .container-propaganda {
+    .container-avaliacoes, .container-propaganda, .container-categorias {
         width: calc((var(--largura-card) * 2) + (var(--largura-espaco-card) * 1) + 1.5em);
+        margin: auto;
     }
 
     .btn-roll {
