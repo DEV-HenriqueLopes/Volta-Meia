@@ -16,22 +16,31 @@
             <div class="collapse navbar-collapse justify-content-center">
                 <ul class="navbar-nav z-2 navbar-ul-top">
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
                             Categorias
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Populares</a></li>
+                            <li class="color-mais-vendido"><a class="dropdown-item color-mais-vendido" href="#"><i class="bi bi-fire fs-6 pe-1"></i>Mais Vendidos</a></li>
+                            <li><a class="dropdown-item color-oferta" href="#"><i class="bi bi-tags-fill fs-6 pe-1"></i>Ofertas</a></li>
                             <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="#">Mesas</a></li>
-                            <li><a class="dropdown-item" href="#">Cadeiras</a></li>
-                            <li><a class="dropdown-item" href="#">Armarios</a></li>
-                            <li><a class="dropdown-item" href="#">Puff</a></li>
-                            <li><a class="dropdown-item" href="#">Sofás</a></li>
-                            <li><a class="dropdown-item" href="#">Organizador</a></li>
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-item dropdown-toggle" href="#">Sala de Estar<i class="bi bi-chevron-right fs-6 ps-2 text-muted"></i></a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Sofás</a></li>
+                                    <li><a class="dropdown-item" href="#">Racks e Painéis</a></li>
+                                    <li><a class="dropdown-item" href="#">Mesas de Sala</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-item dropdown-toggle" href="#">Sala de Jantar<i class="bi bi-chevron-right fs-6 ps-1 text-muted"></i></a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Conjunto</a></li>
+                                    <li><a class="dropdown-item" href="#">Mesas de Jantar</a></li>
+                                    <li><a class="dropdown-item" href="#">Cadeiras</a></li>
+                                    <li><a class="dropdown-item" href="#">Decoracões</a></li>
+                                </ul>
+                            </li>
                         </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Ofertas</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -149,7 +158,7 @@
     </div>
     <main class="container-fluid p-0">
         <section class="bg-body-tertiary container-destaque mt-5 px-4 pb-2 position-relative">
-            <div class="cabecalho-destaque mb-4" style="background-color: var(--bg-cor-destaque-01);">
+            <div class="cabecalho-destaque mb-4 bg-oferta">
                 <h2 class="ms-3"><i class="bi bi-tags-fill fs-5 pe-2"></i>Ofertas</h2>
                 <p class="text-primary">A partir de R$ 99,00</p>
             </div>
@@ -597,7 +606,7 @@
             </div>
         </section>
         <section class="bg-body-tertiary container-destaque mt-5 px-4 pb-2 position-relative">
-            <div class="cabecalho-destaque mb-4" style="background-color: var(--bg-cor-destaque-02);">
+            <div class="cabecalho-destaque mb-4 bg-mais-vendido">
                 <h2 class="ms-3"><i class="bi bi-fire fs-5 pe-2"></i>Mais Vendidos</h2>
                 <p class="text-primary">Itens imperdíveis!</p>
             </div>

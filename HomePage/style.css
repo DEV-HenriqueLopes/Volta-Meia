@@ -29,15 +29,50 @@ a:hover {
 
 :root {
     --bg-cor-01: #efb810;
-    --bg-cor-02: #ffedb7;
-    --bg-cor-destaque-01: #38c438;
-    --bg-cor-destaque-02: #f07a1b;   
+    --bg-cor-02: #ffedb7; 
     --largura-card: 200px;
     --largura-espaco-card: 24px;
     --font-destaque: "Anton", sans-serif;
 }
 
+.color-oferta {
+    color: #38c438 !important;
+}
+
+.bg-oferta {
+    background-color: #38c438;
+}
+
+.color-mais-vendido {
+    color: #f07a1b;
+}
+
+.bg-mais-vendido {
+    background-color: #f07a1b;
+}
+
 /* Navbar & Search */
+
+.dropdown-submenu {
+    position: relative !important;
+}
+
+.dropdown-submenu > .dropdown-menu {
+    top: 0 !important;
+    left: 100% !important;
+    margin-top: -5px !important;
+    margin-left: 2px !important;
+    display: none !important;
+}
+
+.dropdown-submenu:hover > .dropdown-menu {
+    display: block !important;
+}
+
+.dropdown-submenu > .dropdown-toggle::after {
+    display: none !important;
+}
+
 .search-bar {
     width: 20%;
     left: 75%;
