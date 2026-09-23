@@ -20,9 +20,6 @@
                             Categorias
                         </a>
                         <ul class="dropdown-menu">
-                            <li class="color-mais-vendido"><a class="dropdown-item color-mais-vendido" href="#"><i class="bi bi-fire fs-6 pe-1"></i>Mais Vendidos</a></li>
-                            <li><a class="dropdown-item color-oferta" href="#"><i class="bi bi-tags-fill fs-6 pe-1"></i>Ofertas</a></li>
-                            <li><hr class="dropdown-divider"></li>
                             <li class="dropdown-submenu">
                                 <a class="dropdown-item dropdown-toggle" href="#">Sala de Estar<i class="bi bi-chevron-right fs-6 ps-2 text-muted"></i></a>
                                 <ul class="dropdown-menu">
@@ -83,7 +80,7 @@
             <a class="navbar-brand" href="#" id="logo">
                 <img src="../Imagens/ImageNavbar/logo_extenso_volta&meia.png" alt="Logo" class="d-inline-block align-text-top">
             </a>
-            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+            <div class="collapse navbar-collapse" id="navbarNav" style="margin-left: 200px;">
                 <ul class="navbar-nav navbar-ul-bottom">
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -100,9 +97,6 @@
                             <li><a class="dropdown-item" href="#">Organizador</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Ofertas</a>
-                    </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Conta
@@ -115,6 +109,14 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#">Contato</a>
                     </li>
+                    <div class="position-absolute d-flex mt-1" style="right: 20.5%;">
+                        <li class="nav-item">
+                            <a class="nav-link text-white bg-mais-vendido rounded py-1 px-3" href="#"><i class="bi bi-fire fs-6 pe-1"></i>Mais Vendidos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white bg-oferta rounded py-1 px-5 ms-1" href="#"><i class="bi bi-tags-fill fs-6 pe-1"></i>Ofertas</a>
+                        </li>
+                    </div>
                 </ul>
                 <form class="d-flex z-5 search-bar position-absolute" id="search-bar-bottom" role="search">
                     <input class="form-control search" type="search" placeholder="Search" aria-label="Search"/>
