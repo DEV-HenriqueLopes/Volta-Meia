@@ -11,54 +11,6 @@
     <meta name="view-transition" content="same-origin">
 </head>
 <body>
-    <nav class="navbar navbar-expand bg-transparent position-absolute w-100">
-        <div class="container-fluid">
-            <div class="collapse navbar-collapse justify-content-center">
-                <ul class="navbar-nav z-2 navbar-ul-top">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
-                            Categorias
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li class="dropdown-submenu">
-                                <a class="dropdown-item dropdown-toggle" href="#">Sala de Estar<i class="bi bi-chevron-right fs-6 ps-2 text-muted"></i></a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Sofás</a></li>
-                                    <li><a class="dropdown-item" href="#">Racks e Painéis</a></li>
-                                    <li><a class="dropdown-item" href="#">Mesas de Sala</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown-submenu">
-                                <a class="dropdown-item dropdown-toggle" href="#">Sala de Jantar<i class="bi bi-chevron-right fs-6 ps-1 text-muted"></i></a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Conjunto</a></li>
-                                    <li><a class="dropdown-item" href="#">Mesas de Jantar</a></li>
-                                    <li><a class="dropdown-item" href="#">Cadeiras</a></li>
-                                    <li><a class="dropdown-item" href="#">Decoracões</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Conta
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="../SubPaginas/Acesso/login.html">Login</a></li>
-                            <li><a class="dropdown-item" href="#">Cadastre-se</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Contato</a>
-                    </li>
-                </ul>
-                <form class="d-flex z-2 search-bar position-absolute form-search" id="search-bar-top" role="search">
-                    <input class="form-control search" type="search" placeholder="Buscar..." aria-label="search"/>
-                    <button class="btn" type="submit"><i class="bi bi-search fs-4"></i></button>
-                </form>
-            </div>
-        </div>
-    </nav>
     <section id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="4000" data-bs-pause="false">
         <div class="carousel-inner">
             <div class="carousel-item active bg-danger h-content-full">
@@ -80,48 +32,26 @@
             <a class="navbar-brand" href="#" id="logo">
                 <img src="../Imagens/ImageNavbar/logo_extenso_volta&meia.png" alt="Logo" class="d-inline-block align-text-top">
             </a>
-            <div class="collapse navbar-collapse" id="navbarNav" style="margin-left: 200px;">
-                <ul class="navbar-nav navbar-ul-bottom">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Categorias
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Populares</a></li>
-                            <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="#">Mesas</a></li>
-                            <li><a class="dropdown-item" href="#">Cadeiras</a></li>
-                            <li><a class="dropdown-item" href="#">Armarios</a></li>
-                            <li><a class="dropdown-item" href="#">Puff</a></li>
-                            <li><a class="dropdown-item" href="#">Sofás</a></li>
-                            <li><a class="dropdown-item" href="#">Organizador</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Conta
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="../SubPaginas/Acesso/login.html">Login</a></li>
-                            <li><a class="dropdown-item" href="#">Cadastre-se</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Contato</a>
-                    </li>
-                    <div class="position-absolute d-flex mt-1" style="right: 20.5%;">
-                        <li class="nav-item">
-                            <a class="nav-link text-white bg-mais-vendido rounded py-1 px-3" href="#"><i class="bi bi-fire fs-6 pe-1"></i>Mais Vendidos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white bg-oferta rounded py-1 px-5 ms-1" href="#"><i class="bi bi-tags-fill fs-6 pe-1"></i>Ofertas</a>
-                        </li>
-                    </div>
-                </ul>
+            <div class="collapse navbar-collapse" id="navbarNav">
                 <form class="d-flex z-5 search-bar position-absolute" id="search-bar-bottom" role="search">
-                    <input class="form-control search" type="search" placeholder="Search" aria-label="Search"/>
-                    <button class="btn" type="submit" style="margin-top: -5px;"><i class="bi bi-search fs-4"></i></button>
+                    <div class="input-group">
+                        <button class="btn bg-white border-end-0 btn-outline-secondary" type="submit">
+                            <i class="bi bi-search"></i>
+                        </button>
+                        <input class="form-control search" type="search" placeholder="Search" aria-label="Search" />
+                    </div>
                 </form>
+                <div class="input-group position-absolute menu-compacto" style="left: 67%;">
+                    <button class="btn btn-outline-secondary" type="submit">
+                        <i class="bi bi-list"></i>
+                    </button>
+                    <button class="btn btn-outline-secondary" type="submit">
+                        <i class="bi bi-cart2"></i>
+                    </button>
+                    <button class="btn btn-outline-secondary" type="submit">
+                        <i class="bi bi-person"></i>
+                    </button>
+                </div>
             </div>
         </div>
     </nav>
@@ -756,13 +686,13 @@
         </section>
     </main>
     <section class="container-beneficios container-fluid mt-5 bg-body-tertiary" style="height: 70vh;">
-        <div class="max-width-1440 py-3 mx-auto">
-            <h2 class="font-01 text-center p-3">Satisfação Garantida</h2>
+        <div class="max-width-1200 py-3 mx-auto">
+            <h2 class="text-center p-3">Satisfação Garantida</h2>
         </div>
     </section>
     <footer class="text-white">
         <div class=" container-fluid bg-secondary pt-5 pb-5">
-            <div class="row max-width-1440 mx-auto">
+            <div class="row max-width-1200 mx-auto">
                 <div class="col-4">
                     <h4 class="mb-0">Conheça-nos</h4>
                     <ul class="mx-auto mt-4" style="list-style-type: none; padding-left: 0;">
@@ -815,7 +745,7 @@
             </div>
         </div>
         <div class="bg-dark pt-3 pb-5">
-            <div class="row max-width-1440 mx-auto">
+            <div class="row max-width-1200 mx-auto">
                 <div class="col-12 d-flex justify-content-center gap-4">
                     <a href="" class="text-center">Política de Privacidade</a>
                     <a href="" class="text-center">Gestão de Cookies</a>
