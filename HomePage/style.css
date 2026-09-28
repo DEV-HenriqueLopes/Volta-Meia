@@ -54,6 +54,7 @@ a:hover {
 /* Navbar & Search */
 
 .search-bar {
+    top: 15%;
     width: 30%;
     left: 50%;
     transform: translateX(-50%);
@@ -65,6 +66,13 @@ a:hover {
     min-width: 100px;
 }
 
+.btn-delivery {
+    top: 2%;
+    left: 26%;
+    opacity: 0;
+    display: none;
+}
+
 
 .input-group > .btn{
     border: 1px solid black;
@@ -72,6 +80,8 @@ a:hover {
 }
 
 .menu-compacto {
+    left: 67%;
+    top: 15%;
     opacity: 0;
     pointer-events: none;
     transition: 0.4s ease;
@@ -103,7 +113,7 @@ a:hover {
 
 .navbar-scroll-slide {
     position: fixed;
-    top: 75px;
+    top: 85px;
     left: 0;
     right: 0;
 }
@@ -123,13 +133,14 @@ a:hover {
 }
 
 #navbar-bottom {
-    height: 75px;
+    height: 85px;
     z-index: 1050;
 }
 
 /* Interações do Scroll na Navbar */
 #navbar-bottom.navbar-scroll #search-bar-bottom,
-#navbar-bottom.navbar-scroll .menu-compacto{
+#navbar-bottom.navbar-scroll .menu-compacto,
+#navbar-bottom.navbar-scroll .btn-delivery{
     display: flex;
     opacity: 1;
     pointer-events: auto !important;
@@ -575,5 +586,5 @@ select {
 }
 
 .h-content-full {
-    height: calc(100vh - 75px) !important;
+    height: calc(100vh - 85px) !important;
 }

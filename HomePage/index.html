@@ -27,12 +27,20 @@
             </div>
         </div>
     </section>
-    <nav class="navbar navbar-expand bg-body-tertiary h-75px" id="navbar-bottom" style="margin: 0; ">
+    <nav class="navbar navbar-expand bg-body-tertiary" id="navbar-bottom" style="margin: 0; ">
         <div class="container-fluid">
             <a class="navbar-brand" href="#" id="logo">
                 <img src="../Imagens/ImageNavbar/logo_extenso_volta&meia.png" alt="Logo" class="d-inline-block align-text-top">
             </a>
             <div class="collapse navbar-collapse" id="navbarNav">
+                <button type="button" class="btn btn-delivery align-items-center position-absolute">
+                    <div class="d-flex flex-column text-start">
+                        <span class="text-secondary small" style="font-size: 0.72rem;"><i class="bi bi-geo-alt fs-6 text-dark opacity-75 me-2"></i>Enviar para</span>
+                        <span class="text-dark fw-medium text-truncate location-text" style="font-size: 0.85rem;">
+                            Belo Horizonte 3013...
+                        </span>
+                    </div>
+                </button>
                 <form class="d-flex z-5 search-bar position-absolute" id="search-bar-bottom" role="search">
                     <div class="input-group">
                         <button class="btn bg-white border-end-0 btn-outline-secondary" type="submit">
@@ -41,15 +49,22 @@
                         <input class="form-control search" type="search" placeholder="Search" aria-label="Search" />
                     </div>
                 </form>
-                <div class="input-group position-absolute menu-compacto" style="left: 67%;">
+                <div class="d-flex gap-4 position-absolute" style="left: 35%; top: 73%; font-size: 0.9em;">
+                    <a href="#">Categorias</a>
+                    <a href="#">Ofertas</a>
+                    <a href="#">Mais vendidos</a>
+                    <a href="#">História</a>
+                    <a href="#">Contato</a>
+                </div>
+                <div class="input-group position-absolute menu-compacto">
                     <button class="btn btn-outline-secondary" type="submit">
-                        <i class="bi bi-list"></i>
+                        <i class="bi bi-person"></i>
                     </button>
                     <button class="btn btn-outline-secondary" type="submit">
                         <i class="bi bi-cart2"></i>
                     </button>
                     <button class="btn btn-outline-secondary" type="submit">
-                        <i class="bi bi-person"></i>
+                        <i class="bi bi-bell-slash"></i>
                     </button>
                 </div>
             </div>
