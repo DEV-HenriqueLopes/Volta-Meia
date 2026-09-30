@@ -73,7 +73,6 @@ a:hover {
     display: none;
 }
 
-
 .input-group > .btn{
     border: 1px solid black;
     border-radius: 3px 0px 0px 3px;
@@ -96,12 +95,36 @@ a:hover {
     border-radius: 0px 3px 3px 0px !important;
 }
 
+.menu-compacto > .btn:hover > i {
+    display: inline-block;
+    transform: scale(1.15);
+    transition: transform 0.2s ease;
+}
 
-#search-bar-bottom
-{
+.menu-extenso {
+    display: none;
+    position: absolute;
+    left: 35%;
+    top: 75%;
+    gap: 25px;
+    font-size: 0.9em;
+}
+
+.menu-extenso > a:hover {
+    color: #0d6efd;
+    opacity: 1 !important;
+}
+
+.search-bar {
     opacity: 0;
     pointer-events: none;
     transition: 0.4s ease;
+}
+
+.search-bar > .input-group > button:hover,
+.search:hover {
+    border-color: #0d6efd;
+    opacity: 1;
 }
 
 .navbar-scroll {
@@ -140,7 +163,8 @@ a:hover {
 /* Interações do Scroll na Navbar */
 #navbar-bottom.navbar-scroll #search-bar-bottom,
 #navbar-bottom.navbar-scroll .menu-compacto,
-#navbar-bottom.navbar-scroll .btn-delivery{
+#navbar-bottom.navbar-scroll .btn-delivery,
+#navbar-bottom.navbar-scroll .menu-extenso{
     display: flex;
     opacity: 1;
     pointer-events: auto !important;
@@ -166,7 +190,9 @@ a:hover {
     width: 400px; 
     flex-shrink: 0; 
     flex-grow: 0;
-    padding-top: 15px;
+    font-size: 0.9em;
+    color: rgb(150, 150, 150);
+    padding-top: 30px;
 }
 
 .marquee-inner {
