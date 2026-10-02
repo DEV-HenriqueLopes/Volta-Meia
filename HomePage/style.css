@@ -53,9 +53,15 @@ a:hover {
 
 /* Navbar & Search */
 
+.container-nav {
+  width: calc((var(--largura-card) * 4) + (var(--largura-espaco-card) * 3)) !important;
+  max-width: 100%;
+  margin-inline: auto; /* Centraliza perfeitamente com os cards de baixo */
+}
+
 .search-bar {
     top: 15%;
-    width: 30%;
+    width: 70%;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -71,6 +77,10 @@ a:hover {
     left: 26%;
     opacity: 0;
     display: none;
+}
+
+.input-group {
+    position: 0;
 }
 
 .input-group > .btn{
@@ -101,13 +111,16 @@ a:hover {
     transition: transform 0.2s ease;
 }
 
-.menu-extenso {
+.menu-extenso{
     display: none;
     position: absolute;
     left: 35%;
     top: 75%;
     gap: 25px;
-    font-size: 0.9em;
+}
+
+.menu-extenso > .btn-group > button {
+    margin-top: 0px;
 }
 
 .menu-extenso > a:hover {

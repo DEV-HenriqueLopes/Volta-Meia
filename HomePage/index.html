@@ -27,45 +27,53 @@
             </div>
         </div>
     </section>
-    <nav class="navbar navbar-expand bg-body-tertiary" id="navbar-bottom" style="margin: 0; ">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#" id="logo">
-                <img src="../Imagens/ImageNavbar/logo_extenso_volta&meia.png" alt="Logo" class="d-inline-block align-text-top">
-            </a>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <button type="button" class="btn btn-delivery align-items-center position-absolute">
+    <nav class="navbar navbar-expand bg-body-tertiary p-0" id="navbar-bottom">
+        <div class="container-nav mx-auto d-flex flex-column gap-2 py-2">
+            <div class="d-flex align-items-center justify-content-between w-100 gap-3">
+                <a class="navbar-brand m-0 p-0" href="#" id="logo">
+                    <img src="../Imagens/ImageNavbar/logo_extenso_volta&meia.png" alt="Logo" style="height: 40px;">
+                </a>
+                <button type="button" class="btn btn-delivery d-flex align-items-center p-0 border-0 bg-transparent flex-shrink-0">
                     <div class="d-flex flex-column text-start">
-                        <span class="text-secondary small" style="font-size: 0.72rem;"><i class="bi bi-geo-alt fs-6 text-dark opacity-75 me-2"></i>Enviar para</span>
-                        <span class="fw-medium text-truncate location-text text-primary" style="font-size: 0.85rem;">
-                            Belo Horizonte 3013...
-                        </span>
+                    <span class="text-secondary" style="font-size: 0.72rem;">
+                        <i class="bi bi-geo-alt fs-6 text-dark opacity-75 me-1"></i>Enviar para
+                    </span>
+                    <span class="fw-medium text-truncate location-text text-primary" style="font-size: 0.85rem; max-width: 140px;">
+                        Belo Horizonte 3013...
+                    </span>
                     </div>
                 </button>
-                <form class="d-flex z-5 search-bar position-absolute" id="search-bar-bottom" role="search">
+                <form class="flex-grow-1 m-0" id="search-bar-bottom" role="search">
                     <div class="input-group">
-                        <button class="btn bg-white border-end-0" type="submit">
-                            <i class="bi bi-search"></i>
-                        </button>
-                        <input class="form-control search" type="search" placeholder="Pesquisar ..." aria-label="Search" />
+                    <button class="btn bg-white border border-end-0" type="submit">
+                        <i class="bi bi-search"></i>
+                    </button>
+                    <input class="form-control search border-start-0 shadow-none" type="search" placeholder="Pesquisar ..." aria-label="Search" />
                     </div>
                 </form>
-                <div class="menu-extenso">
-                    <a href="#">Categorias</a>
-                    <a href="#">Ofertas</a>
-                    <a href="#">Mais vendidos</a>
-                    <a href="#">História</a>
-                    <a href="#">Contato</a>
+                <div class="d-flex align-items-center gap-1 menu-compacto flex-shrink-0">
+                    <button class="btn border-0 shadow-none p-2" type="button"><i class="bi bi-person fs-5"></i></button>
+                    <button class="btn border-0 shadow-none p-2" type="button"><i class="bi bi-cart2 fs-5"></i></button>
+                    <button class="btn border-0 shadow-none p-2" type="button"><i class="bi bi-bell-slash fs-5"></i></button>
                 </div>
-                <div class="input-group position-absolute menu-compacto">
-                    <button class="btn" type="submit">
-                        <i class="bi bi-person"></i>
+            </div>
+            <div class="d-flex align-items-center gap-4 small menu-extenso">
+                <div class="btn-group dropend m-0 p-0 align-items-center">
+                    <button type="button" class="btn p-0 btn-sm border-0 shadow-none fw-medium">Categorias</button>
+                    <button type="button" class="btn dropdown-toggle dropdown-toggle-split py-0 ps-1 border-0 shadow-none" data-bs-toggle="dropdown" aria-expanded="false">
+                    <span class="visually-hidden">Toggle Dropdown</span>
                     </button>
-                    <button class="btn" type="submit">
-                        <i class="bi bi-cart2"></i>
-                    </button>
-                    <button class="btn" type="submit">
-                        <i class="bi bi-bell-slash"></i>
-                    </button>
+                    <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">Separated link</a></li>
+                    </ul>
+                </div>
+                <a href="#" class="text-decoration-none text-dark">Ofertas</a>
+                <a href="#" class="text-decoration-none text-dark">Mais vendidos</a>
+                <a href="#" class="text-decoration-none text-dark">História</a>
+                <a href="#" class="text-decoration-none text-dark">Contato</a>
                 </div>
             </div>
         </div>
