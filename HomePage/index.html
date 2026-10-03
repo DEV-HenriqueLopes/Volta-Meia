@@ -29,11 +29,11 @@
     </section>
     <nav class="navbar navbar-expand bg-body-tertiary p-0" id="navbar-bottom">
         <div class="container-nav mx-auto d-flex flex-column gap-2 py-2">
-            <div class="d-flex align-items-center justify-content-between w-100 gap-3">
+            <div class="menu-top d-flex align-items-center justify-content-between w-100 gap-3">
                 <a class="navbar-brand m-0 p-0" href="#" id="logo">
-                    <img src="../Imagens/ImageNavbar/logo_extenso_volta&meia.png" alt="Logo" style="height: 40px;">
+                    <img src="../Imagens/ImageNavbar/logo_extenso_volta&meia.png" alt="Logo" style="height: 150px;">
                 </a>
-                <button type="button" class="btn btn-delivery d-flex align-items-center p-0 border-0 bg-transparent flex-shrink-0">
+                <button type="button" class="btn btn-delivery d-flex align-items-center py-0 border-0 bg-transparent flex-shrink-0">
                     <div class="d-flex flex-column text-start">
                     <span class="text-secondary" style="font-size: 0.72rem;">
                         <i class="bi bi-geo-alt fs-6 text-dark opacity-75 me-1"></i>Enviar para
@@ -43,31 +43,31 @@
                     </span>
                     </div>
                 </button>
-                <form class="flex-grow-1 m-0" id="search-bar-bottom" role="search">
-                    <div class="input-group">
-                    <button class="btn bg-white border border-end-0" type="submit">
-                        <i class="bi bi-search"></i>
-                    </button>
-                    <input class="form-control search border-start-0 shadow-none" type="search" placeholder="Pesquisar ..." aria-label="Search" />
+                <form class="flex-grow-1 m-0 search-bar" id="search-bar-bottom" role="search">
+                    <div class="input-group search">
+                        <button class="btn bg-white border-0" type="submit">
+                            <i class="bi bi-search"></i>
+                        </button>
+                        <input class="form-control border-0 shadow-none" type="search" placeholder="Pesquisar ..." aria-label="Search" />
                     </div>
                 </form>
                 <div class="d-flex align-items-center gap-1 menu-compacto flex-shrink-0">
-                    <button class="btn border-0 shadow-none p-2" type="button"><i class="bi bi-person fs-5"></i></button>
-                    <button class="btn border-0 shadow-none p-2" type="button"><i class="bi bi-cart2 fs-5"></i></button>
-                    <button class="btn border-0 shadow-none p-2" type="button"><i class="bi bi-bell-slash fs-5"></i></button>
+                    <button class="btn p-2 border-start-1" type="button"><i class="bi bi-person fs-5"></i></button>
+                    <button class="btn p-2" type="button"><i class="bi bi-cart2 fs-5"></i></button>
+                    <button class="btn p-2" type="button"><i class="bi bi-bell-slash fs-5"></i></button>
                 </div>
             </div>
-            <div class="d-flex align-items-center gap-4 small menu-extenso">
+            <div class="d-flex align-items-center gap-4 small menu-bottom" style="transition: 0.4s ease;">
                 <div class="btn-group dropend m-0 p-0 align-items-center">
                     <button type="button" class="btn p-0 btn-sm border-0 shadow-none fw-medium">Categorias</button>
-                    <button type="button" class="btn dropdown-toggle dropdown-toggle-split py-0 ps-1 border-0 shadow-none" data-bs-toggle="dropdown" aria-expanded="false">
-                    <span class="visually-hidden">Toggle Dropdown</span>
+                    <button type="button" class="btn dropdown-toggle dropdown-toggle-split py-0 ps-2 border-0 shadow-none" data-bs-toggle="dropdown" aria-expanded="false">
+                        <span class="visually-hidden">Toggle Dropdown</span>
                     </button>
                     <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                    <li><hr class="dropdown-divider"></li>
-                    <li><a class="dropdown-item" href="#">Separated link</a></li>
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Separated link</a></li>
                     </ul>
                 </div>
                 <a href="#" class="text-decoration-none text-dark">Ofertas</a>
@@ -124,10 +124,8 @@
                     <div class="card">
                         <img src="../Imagens/imagens_produtos/pngtree-vector-gallery-icon-png-image_515223.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
-                        </div>
-                        <div class="card-body mt-3">
-                            <h5 class="card-title">R$XX,XX</h5>
+                            <p class="m-0">Nome Produto...</p>
+                            <h5 class="card-title mt-2">R$XX,XX</h5>
                         </div>
                     </div>
                 </div>
@@ -135,10 +133,8 @@
                     <div class="card">
                         <img src="../Imagens/imagens_produtos/pngtree-vector-gallery-icon-png-image_515223.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
-                        </div>
-                        <div class="card-body mt-3">
-                            <h5 class="card-title">R$XX,XX</h5>
+                            <p class="m-0">Nome Produto...</p>
+                            <h5 class="card-title mt-2">R$XX,XX</h5>
                         </div>
                     </div>
                 </div>
@@ -146,10 +142,8 @@
                     <div class="card">
                         <img src="../Imagens/imagens_produtos/pngtree-vector-gallery-icon-png-image_515223.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
-                        </div>
-                        <div class="card-body mt-3">
-                            <h5 class="card-title">R$XX,XX</h5>
+                            <p class="m-0">Nome Produto...</p>
+                            <h5 class="card-title mt-2">R$XX,XX</h5>
                         </div>
                     </div>
                 </div>
@@ -157,10 +151,8 @@
                     <div class="card">
                         <img src="../Imagens/imagens_produtos/pngtree-vector-gallery-icon-png-image_515223.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
-                        </div>
-                        <div class="card-body mt-3">
-                            <h5 class="card-title">R$XX,XX</h5>
+                            <p class="m-0">Nome Produto...</p>
+                            <h5 class="card-title mt-2">R$XX,XX</h5>
                         </div>
                     </div>
                 </div>
@@ -168,10 +160,8 @@
                     <div class="card">
                         <img src="../Imagens/imagens_produtos/pngtree-vector-gallery-icon-png-image_515223.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
-                        </div>
-                        <div class="card-body mt-3">
-                            <h5 class="card-title">R$XX,XX</h5>
+                            <p class="m-0">Nome Produto...</p>
+                            <h5 class="card-title mt-2">R$XX,XX</h5>
                         </div>
                     </div>
                 </div>
@@ -179,10 +169,8 @@
                     <div class="card">
                         <img src="../Imagens/imagens_produtos/pngtree-vector-gallery-icon-png-image_515223.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
-                        </div>
-                        <div class="card-body mt-3">
-                            <h5>R$XX,XX</h5>
+                            <p class="m-0">Nome Produto...</p>
+                            <h5 class="card-title mt-2">R$XX,XX</h5>
                         </div>
                     </div>
                 </div>
@@ -190,10 +178,8 @@
                     <div class="card">
                         <img src="../Imagens/imagens_produtos/pngtree-vector-gallery-icon-png-image_515223.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
-                        </div>
-                        <div class="card-body mt-3">
-                            <h5 class="card-title">R$XX,XX</h5>
+                            <p class="m-0">Nome Produto...</p>
+                            <h5 class="card-title mt-2">R$XX,XX</h5>
                         </div>
                     </div>
                 </div>
@@ -201,10 +187,8 @@
                     <div class="card">
                         <img src="../Imagens/imagens_produtos/pngtree-vector-gallery-icon-png-image_515223.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
-                        </div>
-                        <div class="card-body mt-3">
-                            <h5 class="card-title">R$XX,XX</h5>
+                            <p class="m-0">Nome Produto...</p>
+                            <h5 class="card-title mt-2">R$XX,XX</h5>
                         </div>
                     </div>
                 </div>
@@ -212,10 +196,8 @@
                     <div class="card">
                         <img src="../Imagens/imagens_produtos/pngtree-vector-gallery-icon-png-image_515223.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
-                        </div>
-                        <div class="card-body mt-3">
-                            <h5 class="card-title">R$XX,XX</h5>
+                            <p class="m-0">Nome Produto...</p>
+                            <h5 class="card-title mt-2">R$XX,XX</h5>
                         </div>
                     </div>
                 </div>
@@ -223,10 +205,8 @@
                     <div class="card">
                         <img src="../Imagens/imagens_produtos/pngtree-vector-gallery-icon-png-image_515223.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
-                        </div>
-                        <div class="card-body mt-3">
-                            <h5 class="card-title">R$XX,XX</h5>
+                            <p class="m-0">Nome Produto...</p>
+                            <h5 class="card-title mt-2">R$XX,XX</h5>
                         </div>
                     </div>
                 </div>
@@ -234,10 +214,8 @@
                     <div class="card">
                         <img src="../Imagens/imagens_produtos/pngtree-vector-gallery-icon-png-image_515223.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
-                        </div>
-                        <div class="card-body mt-3">
-                            <h5 class="card-title">R$XX,XX</h5>
+                            <p class="m-0">Nome Produto...</p>
+                            <h5 class="card-title mt-2">R$XX,XX</h5>
                         </div>
                     </div>
                 </div>
@@ -245,10 +223,8 @@
                     <div class="card">
                         <img src="../Imagens/imagens_produtos/pngtree-vector-gallery-icon-png-image_515223.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
-                        </div>
-                        <div class="card-body mt-3">
-                            <h5>R$XX,XX</h5>
+                            <p class="m-0">Nome Produto...</p>
+                            <h5 class="card-title mt-2">R$XX,XX</h5>
                         </div>
                     </div>
                 </div>

@@ -30,7 +30,7 @@ a:hover {
 :root {
     --bg-cor-01: #efb810;
     --bg-cor-02: #ffedb7; 
-    --largura-card: 200px;
+    --largura-card: 250px;
     --largura-espaco-card: 24px;
     --font-destaque: "Anton", sans-serif;
 }
@@ -56,135 +56,169 @@ a:hover {
 .container-nav {
   width: calc((var(--largura-card) * 4) + (var(--largura-espaco-card) * 3)) !important;
   max-width: 100%;
-  margin-inline: auto; /* Centraliza perfeitamente com os cards de baixo */
+  margin-inline: auto;
+}
+
+.menu-top {
+    margin-top: -30px;
 }
 
 .search-bar {
-    top: 15%;
-    width: 70%;
-    left: 50%;
-    transform: translateX(-50%);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  border-radius: 3px !important;
+  border: 1px solid black;
+  transform: translateY(-8px) scale(0.97);
+  transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1), 
+              transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), 
+              visibility 0.5s ease;
 }
 
-.search {
-    border: 1px solid black;
-    border-radius:0px 3px 3px 0px !important;
-    min-width: 100px;
+.search-bar:hover {
+  border-color: #0d6efd;
+  opacity: 1;
+}
+
+#search-bar-bottom {
+  opacity: 0;
 }
 
 .btn-delivery {
-    top: 2%;
-    left: 26%;
-    opacity: 0;
-    display: none;
+  top: 2%;
+  left: 26%;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(-6px);
+  transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1), 
+              transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), 
+              visibility 0.5s ease;
 }
 
 .input-group {
-    position: 0;
+  position: 0;
 }
 
-.input-group > .btn{
-    border: 1px solid black;
-    border-radius: 3px 0px 0px 3px;
+.input-group > .btn {
+  border: 1px solid black;
+  border-radius: 3px 0px 0px 3px;
 }
 
 .menu-compacto {
-    left: 67%;
-    top: 15%;
-    opacity: 0;
-    pointer-events: none;
-    transition: 0.4s ease;
-    display: none;
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+  transform: translateY(-6px);
+  transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1), 
+              transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), 
+              visibility 0.5s ease;
 }
 
 .menu-compacto > .btn:first-child {
-    border-radius: 3px 0px 0px 3px !important;
+  border-radius: 3px 0px 0px 3px !important;
 }
 
 .menu-compacto > .btn:last-child {
-    border-radius: 0px 3px 3px 0px !important;
+  border-radius: 0px 3px 3px 0px !important;
 }
 
 .menu-compacto > .btn:hover > i {
-    display: inline-block;
-    transform: scale(1.15);
-    transition: transform 0.2s ease;
+  display: inline-block;
+  transform: scale(1.15);
+  transition: transform 0.3s ease;
 }
 
-.menu-extenso{
-    display: none;
-    position: absolute;
-    left: 35%;
-    top: 75%;
-    gap: 25px;
+.menu-bottom {
+  opacity: 0;
+  position: absolute;
+  left: 36.2%;
+  top: 60%;
+  gap: 25px;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(-6px);
+  transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1), 
+              transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), 
+              visibility 0.5s ease;
 }
 
-.menu-extenso > .btn-group > button {
-    margin-top: 0px;
+.menu-bottom > .btn-group > button {
+  margin-top: 0px;
 }
 
-.menu-extenso > a:hover {
-    color: #0d6efd;
-    opacity: 1 !important;
-}
-
-.search-bar {
-    opacity: 0;
-    pointer-events: none;
-    transition: 0.4s ease;
-}
-
-.search-bar > .input-group > button:hover,
-.search:hover {
-    border-color: #0d6efd;
-    opacity: 1;
+.menu-bottom > a:hover {
+  color: #0d6efd;
+  opacity: 1 !important;
 }
 
 .navbar-scroll {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 
 .navbar-scroll-slide {
-    position: fixed;
-    top: 85px;
-    left: 0;
-    right: 0;
+  position: fixed;
+  top: 100px;
+  left: 0;
+  right: 0;
 }
 
 #logo {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    transition: 0.7s ease;
-    display: flex;
-    justify-content: center;
-    margin: 0;
+  position: absolute;
+  left: 50%;
+  top: -25%;
+  transform: translateX(-50%);
+  transition: left 0.6s cubic-bezier(0.16, 1, 0.3, 1), 
+              transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  justify-content: center;
 }
 
 #logo img {
-    width: 100%;
+  width: 100%;
 }
 
 #navbar-bottom {
-    height: 85px;
-    z-index: 1050;
+  height: 100px;
+  z-index: 1050;
 }
+/* ========================================================
+   Interações do Scroll na Navbar (Ativação + Cascata)
+   ======================================================== */
 
-/* Interações do Scroll na Navbar */
-#navbar-bottom.navbar-scroll #search-bar-bottom,
+#navbar-bottom.navbar-scroll .search-bar,
 #navbar-bottom.navbar-scroll .menu-compacto,
 #navbar-bottom.navbar-scroll .btn-delivery,
-#navbar-bottom.navbar-scroll .menu-extenso{
-    display: flex;
-    opacity: 1;
-    pointer-events: auto !important;
+#navbar-bottom.navbar-scroll .menu-bottom {
+  display: flex;
+  opacity: 1;
+  pointer-events: auto !important;
+  visibility: visible !important;
+  transform: translateY(0) scale(1);
 }
 
 #navbar-bottom.navbar-scroll #logo {
-    left: 120px;
+  left: 120px;
+}
+
+/* Efeito Cascata: cada elemento surge em sequência */
+#navbar-bottom.navbar-scroll .btn-delivery {
+  transition-delay: 0.10s;
+}
+
+#navbar-bottom.navbar-scroll .search-bar {
+  transition-delay: 0.17s;
+}
+
+#navbar-bottom.navbar-scroll .menu-compacto {
+  transition-delay: 0.25s;
+}
+
+#navbar-bottom.navbar-scroll .menu-bottom {
+  transition-delay: 0.33s;
 }
 
 /* Marquee */
@@ -192,7 +226,7 @@ a:hover {
     display: flex;
     align-items: center;
     width: 100%; 
-    height: 40px;
+    height: 25px;
     overflow: hidden; 
     box-shadow: 0 3.5px 5px rgba(0, 0, 0, 0.1);
     z-index: 1030;
@@ -204,8 +238,7 @@ a:hover {
     flex-shrink: 0; 
     flex-grow: 0;
     font-size: 0.9em;
-    color: rgb(150, 150, 150);
-    padding-top: 30px;
+    padding-top: 20px;
 }
 
 .marquee-inner {
@@ -292,20 +325,6 @@ a:hover {
     display: none;             
 }
 
-.container-roll::-webkit-scrollbar-track {
-    background: transparent;
-    border-radius: 0;
-}
-
-.container-roll::-webkit-scrollbar-thumb {
-    background: rgb(217, 217, 217);
-    border-radius: 10px;
-}
-
-.container-roll::-webkit-scrollbar-thumb:hover {
-    background: rgb(157, 157, 157);
-}
-
 .container-roll {
     width: fit-content;
     width: calc((var(--largura-card) * 4) + (var(--largura-espaco-card) * 3));
@@ -351,12 +370,15 @@ a:hover {
 }
 
 .card {
-    width: 200px;
+    width: 250px;
+    height: 315px;
     border-radius: 0px;
+    border: 0px;
 }
 
+
 .card-body {
-    padding: 10px !important;
+    padding: 0px 10px !important;
 }
 
 .card-text {
@@ -625,5 +647,5 @@ select {
 }
 
 .h-content-full {
-    height: calc(100vh - 85px) !important;
+    height: calc(100vh - 100px) !important;
 }
