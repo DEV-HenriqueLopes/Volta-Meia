@@ -40,7 +40,7 @@ function setupCarousel(containerId, btnPrevId, btnNextId, itemSelector = '.ofert
     const getTamanhoDoPulo = () => {
         const card = container.querySelector(itemSelector);
         if (!card) return 300;
-        const gap = parseInt(window.getComputedStyle(container).gap) || 24;
+        const gap = parseInt(window.getComputedStyle(container).gap) || 10;
         return card.clientWidth + gap;
     };
 
