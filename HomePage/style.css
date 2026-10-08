@@ -31,7 +31,7 @@ a:hover {
     --bg-cor-01: #efb810;
     --bg-cor-02: #ffedb7; 
     --largura-card: 200px;
-    --largura-espaco-card: 0px;
+    --largura-espaco-card: 10px;
     --font-destaque: "Anton", sans-serif;
 }
 
@@ -241,8 +241,7 @@ a:hover {
 .container-destaque,
 .container-principal
 {
-    border-radius: 0 0 2px 2px;
-    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+    
 }
 
 .container-destaque,
@@ -264,7 +263,6 @@ a:hover {
 .cabecalho-destaque {
     display: flex;
     height: 70px;
-    box-shadow: 0 -2px 5px -2px rgba(0, 0, 0, 0.1);
     margin-inline: -25px;
     border-radius: 10px 10px 0 0;
     align-items: center;
@@ -365,27 +363,28 @@ a:hover {
     height: 210px;
     border-radius: 0px;
     border: 0px;
-    background-color: #f8f9fa;
 }
 
 .card > img {
     width: 160px;
-    margin: auto;
+    height: 160px;
     background-color: #f8f9fa;
+    object-fit: contain; /* substitui o background-size: contain */
+    object-position: center; /* substitui o background-position: center */
+    display: block; /* essencial para o margin: auto funcionar */
+    margin: 0 auto;
 }
 
 .card-body {
-    padding: 0px 20px !important;
-    background-color: #f8f9fa;
+    padding: 5px 0px 0px 0px;
+    color: #3f454e;
+    font-weight: 500;
 }
 
-.card-text {
-    font-size: clamp(13px, 1.2vw, 16px);
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
+.card-body p{
+    font-size: 0.8em;
+    font-weight: 700;
+    color: black;
 }
 
 .nav-link.btn {
@@ -493,7 +492,7 @@ select {
     .container-propaganda,
     .container-categorias,
     .container-roll {
-        width: calc(var(--largura-card) * 4) !important;
+        width: calc((var(--largura-card) * 4) + (var(--largura-espaco-card) * 3))  !important;
     }
 
     .container-nav {
@@ -514,7 +513,7 @@ select {
 @media screen and (min-width:992px) {
 
     :root {
-        --largura-card: 260px;
+        --largura-card: 300px;
     }
     
     .btn-delivery {
@@ -526,12 +525,13 @@ select {
     }
 
     .card {
-        width: 260px;
-        height: 270px;
+        width: 300px;
+        height: 230px;
     }
 
     .card > img {
-        width: 210px;
+        width: 300px;
+        height: 200px;
     }
 
     .container-principal>.container-interno-principal,
